@@ -1,7 +1,7 @@
 package tests;
 
 import modelo.Circulo;
-import modelo.Figura;
+//import modelo.Figura;
 import modelo.Rectangulo;
 
 public class Test01 {
