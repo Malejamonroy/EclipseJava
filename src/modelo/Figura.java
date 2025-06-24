@@ -1,6 +1,6 @@
 package modelo;
 
-public class Figura {
+public abstract class Figura { //concepto abstracta
 
 	private double x;
 	private double y;
@@ -25,13 +25,14 @@ public class Figura {
 		this.y = y;
 	}
 	
-	public double area() {
-		return 0;
-	}
+	public abstract double area(); //metodo abstracto: metodo que no tiene cuerpo, ni codigo, esta creado para obtener decendiente
+	//consecuencia:exige que los decendiente tengan codigo;obliga al usuario a que meta los datos que que necesito ai o si 
+	//hace que implemenete el metodo area y el metodo perimetro
+		
 	
-	public double perimetro() {
-		return 0;
-	}
+	public abstract double perimetro();
+	
+	
 	public boolean equals(Object otro) {
 		if(otro == null) return false;
 		if(this == otro) return true;
