@@ -5,6 +5,8 @@ public class Punto {
 	private double x;
 	private double y;
 	
+	public Punto() {}
+	
 	public Punto(double x,double y) {
 		this.x = x;
 		this.y = y;
@@ -26,6 +28,14 @@ public class Punto {
 	@Override
 	public String toString() {
 		return "Punto [x=" + x + ", y=" + y + "]";
+	}
+	
+	public boolean equals(Object otro){
+		if(otro == null) return false;
+		if(this == otro) return true;
+		if(this.getClass() != otro.getClass()) return false;
+		Punto otra = (Punto) otro;
+		return this.x == otra.x && this.y == otra.y;
 	}
 	
 

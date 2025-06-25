@@ -48,17 +48,20 @@ public abstract class Figura { //concepto abstracta
 	}
 	
 	public static Punto centroMasas(Figura... figuras) {
-		var sumatoria = 0.0;
+		var sumatoriaArea = 0.0;
 		var cmx = 0.0;
 		var cmy = 0.0;
 		for(int i = 0; i< figuras.length; i++) {
-			sumatoria += figuras[i].area();
-			 cmx = sumatoria * figuras[i].getX()/sumatoria;
-			 cmy = sumatoria * figuras[i].getY()/sumatoria;
+			cmx += figuras[i].area()* figuras[i].getX();
+			cmy += figuras[i].area()* figuras[i].getY();
+			sumatoriaArea +=figuras[i].area();
 			
-		} 
-		Punto punto = new Punto(cmx,cmy);
-		return punto;
+		}                                     
+		double centroMasaX = cmx / sumatoriaArea;
+		double centroMasaY = cmy / sumatoriaArea;
+		Punto  centroMasa = new Punto(centroMasaX,centroMasaY);
+		return centroMasa;
+		//return new Punto(cmx/sumatoriaArea, cmy/sumatoriaArea);
 	}
 	
 	
