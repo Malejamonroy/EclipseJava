@@ -1,6 +1,6 @@
 package modelo;
 
-public class Punto {
+public class Punto implements Dibujable{
 
 	private double x;
 	private double y;
@@ -36,6 +36,11 @@ public class Punto {
 		if(this.getClass() != otro.getClass()) return false;
 		Punto otra = (Punto) otro;
 		return this.x == otra.x && this.y == otra.y;
+	}
+
+	@Override
+	public void dibujar() {
+		System.out.println("puntito");		
 	}
 	
 

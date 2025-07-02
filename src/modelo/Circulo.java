@@ -1,6 +1,6 @@
 package modelo;
 
-public class Circulo extends Figura {
+public class Circulo extends Figura implements Dibujable{
 		
 	private double radio;
 		
@@ -42,6 +42,12 @@ public class Circulo extends Figura {
 		if(!super.equals(otro))return false;
 		Circulo circulo = (Circulo)otro;
 		return this.radio == circulo.radio;
+	}
+
+	@Override
+	public void dibujar() {
+		System.out.println("dibujando el circulo");
+		
 	}
 	
 
