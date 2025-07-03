@@ -23,7 +23,7 @@ public class test05Interface {
 		for (int i=0; i<dibujables.length; i++) {
 			dibujables[i].dibujar();
 		}
-		
+	
 	}
 
 }
